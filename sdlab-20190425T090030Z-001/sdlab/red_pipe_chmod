@@ -1,0 +1,136 @@
+student@T5:~$ cd ajce
+student@T5:~/ajce$ cd mca
+student@T5:~/ajce/mca$ cd lmca
+student@T5:~/ajce/mca/lmca$ ls 
+3.txt     exprcommand  f3.txt  id101    ll.txt    p234.tar.gz  p4.txt
+ac.text   f1.txt       F3.txt  id102    n1.txt    p2.txt       place.txt
+demo.txt  f2.txt       ga.txt  lla.txt  name.txt  p3.txt
+student@T5:~/ajce/mca/lmca$ cat hhh
+cat: hhh: No such file or directory
+student@T5:~/ajce/mca/lmca$ cat >hhh
+af
+ah
+lkjk
+kljlk^Z
+[1]+  Stopped                 cat > hhh
+student@T5:~/ajce/mca/lmca$ cat >ggg
+hjk
+uhiiu
+ldj
+^Z
+[2]+  Stopped                 cat > ggg
+student@T5:~/ajce/mca/lmca$ ls > hhh
+student@T5:~/ajce/mca/lmca$ cat hhh
+3.txt
+ac.text
+demo.txt
+exprcommand
+f1.txt
+f2.txt
+f3.txt
+F3.txt
+ga.txt
+ggg
+hhh
+id101
+id102
+lla.txt
+ll.txt
+n1.txt
+name.txt
+p234.tar.gz
+p2.txt
+p3.txt
+p4.txt
+place.txt
+student@T5:~/ajce/mca/lmca$ ls < ggg
+3.txt    demo.txt     f1.txt  f3.txt  ga.txt  hhh    id102    ll.txt  name.txt     p2.txt  p4.txt
+ac.text  exprcommand  f2.txt  F3.txt  ggg     id101  lla.txt  n1.txt  p234.tar.gz  p3.txt  place.txt
+student@T5:~/ajce/mca/lmca$ cat > alex
+rrr
+tree
+flower
+as
+top
+we
+come
+play 
+home^Z
+[3]+  Stopped                 cat > alex
+student@T5:~/ajce/mca/lmca$ cat alex | head -2| tail -6
+rrr
+tree
+student@T5:~/ajce/mca/lmca$ cd .
+student@T5:~/ajce/mca/lmca$ ^C
+student@T5:~/ajce/mca/lmca$ cat > jerry
+hai dude
+hai anjana
+hi man
+how are you 
+tell about as
+i like you^Z
+[4]+  Stopped                 cat > jerry
+student@T5:~/ajce/mca/lmca$ chmod 754 jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-rwxr-xr-- 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-rwxr-xr-- 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ chmod 111 jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+---x--x--x 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ chmod 222 jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+--w--w--w- 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ chmod 444 jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-r--r--r-- 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ chmod 421 jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-r---w---x 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ chmode w+x
+
+Command 'chmode' not found, did you mean:
+
+  command 'chmod' from deb coreutils
+
+Try: apt install <deb name>
+
+student@T5:~/ajce/mca/lmca$ chmod w+x
+chmod: missing operand after ‘w+x’
+Try 'chmod --help' for more information.
+student@T5:~/ajce/mca/lmca$ chmod u+r
+chmod: missing operand after ‘u+r’
+Try 'chmod --help' for more information.
+student@T5:~/ajce/mca/lmca$ chmod chmode u+r jerry
+chmod: invalid mode: ‘chmode’
+Try 'chmod --help' for more information.
+student@T5:~/ajce/mca/lmca$ chmod u+r jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-r---w---x 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ chmod u+r jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-r---w---x 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ chmod u+r+w jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-rw--w---x 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ chmod g+w,o+x jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-rw--w---x 1 student student 54 Mar 14 15:22 jerry
+student@T5:~/ajce/mca/lmca$ chmod g+x,o+x jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-rw--wx--x 1 student student 58 Mar 14 15:48 jerry
+student@T5:~/ajce/mca/lmca$ chmod 111 jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+---x--x--x 1 student student 60 Mar 14 15:49 jerry
+student@T5:~/ajce/mca/lmca$ chmod u+rwx,g+rw,o+r jerry
+student@T5:~/ajce/mca/lmca$ 
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-rwxrwxr-x 1 student student 60 Mar 14 15:49 jerry
+student@T5:~/ajce/mca/lmca$ chmod u-rwx,g-rwx,o-xr jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+---------- 1 student student 60 Mar 14 15:49 jerry
+student@T5:~/ajce/mca/lmca$ chmod u+rwx,g+rw,o+r jerry
+student@T5:~/ajce/mca/lmca$ ls -l jerry
+-rwxrw-r-- 1 student student 60 Mar 14 15:49 jerry
+student@T5:~/ajce/mca/lmca$ 
+

@@ -1,0 +1,103 @@
+student@T5:~/Documents$ cd Documents
+bash: cd: Documents: No such file or directory
+student@T5:~/Documents$ git init gitmca
+Initialized empty Git repository in /home/student/Documents/gitmca/.git/
+student@T5:~/Documents$ gedit anjana
+student@T5:~/Documents$ git add anjana
+fatal: not a git repository (or any of the parent directories): .git
+student@T5:~/Documents$ cd gitmca
+student@T5:~/Documents/gitmca$ git add anjana
+student@T5:~/Documents/gitmca$ git config --global user.email "anjananandan344@gmail.com
+> ^C
+student@T5:~/Documents/gitmca$ git config --global user.email "anjananandan344@gmail.com"
+student@T5:~/Documents/gitmca$ git config --global user.name "AnjanaNandan1996"
+student@T5:~/Documents/gitmca$ git commit -m "i am github"
+[master (root-commit) eb63df5] i am github
+ 1 file changed, 26 insertions(+)
+ create mode 100644 anjana
+student@T5:~/Documents/gitmca$ git remote add orgin https://github.com/AnjanaNandan1996/anjana1995.git
+student@T5:~/Documents/gitmca$ git push orgin master
+Username for 'https://github.com': anjana1995
+Password for 'https://anjana1995@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/AnjanaNandan1996/anjana1995.git/'
+student@T5:~/Documents/gitmca$ git push orgin master
+Username for 'https://github.com': AnjanaNandan1996
+Password for 'https://AnjanaNandan1996@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/AnjanaNandan1996/anjana1995.git/'
+student@T5:~/Documents/gitmca$ git push orgin master
+Username for 'https://github.com': AnjanaNandan1996
+Password for 'https://AnjanaNandan1996@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/AnjanaNandan1996/anjana1995.git/'
+student@T5:~/Documents/gitmca$ git push orgin master
+Username for 'https://github.com': AnjanaNandan1996
+Password for 'https://AnjanaNandan1996@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 406 bytes | 406.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/AnjanaNandan1996/anjana1995.git
+ * [new branch]      master -> master
+student@T5:~/Documents/gitmca$ git branch newbr
+student@T5:~/Documents/gitmca$ git checkout newbr
+Switched to branch 'newbr'
+student@T5:~/Documents/gitmca$ gedit ann
+student@T5:~/Documents/gitmca$ git add anmn
+fatal: pathspec 'anmn' did not match any files
+student@T5:~/Documents/gitmca$ git add ann
+student@T5:~/Documents/gitmca$ git commit -m "perform branch"
+[newbr 93bbf5e] perform branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ann
+student@T5:~/Documents/gitmca$ git remote add orgin https://github.com/AnjanaNandan1996/anjana1995.git
+fatal: remote orgin already exists.
+student@T5:~/Documents/gitmca$ git remote add orgi https://github.com/AnjanaNandan1996/anjana1995.git
+student@T5:~/Documents/gitmca$ git pus orgi master
+git: 'pus' is not a git command. See 'git --help'.
+
+The most similar commands are
+	push
+	pull
+student@T5:~/Documents/gitmca$ git push orgi master
+Username for 'https://github.com': AnjanaNandan1996
+Password for 'https://AnjanaNandan1996@github.com': 
+Everything up-to-date
+student@T5:~/Documents/gitmca$ git push orgin newbr
+Username for 'https://github.com': AnjanaNandan1996
+Password for 'https://AnjanaNandan1996@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 426 bytes | 426.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'newbr' on GitHub by visiting:
+remote:      https://github.com/AnjanaNandan1996/anjana1995/pull/new/newbr
+remote: 
+To https://github.com/AnjanaNandan1996/anjana1995.git
+ * [new branch]      newbr -> newbr
+student@T5:~/Documents/gitmca$ git status
+On branch newbr
+nothing to commit, working tree clean
+student@T5:~/Documents/gitmca$ git clone https://github.com/AnjanaNandan1996/anajclone.git
+Cloning into 'anajclone'...
+warning: You appear to have cloned an empty repository.
+student@T5:~/Documents/gitmca$ git fetch orgin newbr
+From https://github.com/AnjanaNandan1996/anjana1995
+ * branch            newbr      -> FETCH_HEAD
+student@T5:~/Documents/gitmca$ git merge orgin/newbr
+Already up to date.
+student@T5:~/Documents/gitmca$ git remote -v
+orgi	https://github.com/AnjanaNandan1996/anjana1995.git (fetch)
+orgi	https://github.com/AnjanaNandan1996/anjana1995.git (push)
+orgin	https://github.com/AnjanaNandan1996/anjana1995.git (fetch)
+orgin	https://github.com/AnjanaNandan1996/anjana1995.git (push)
+student@T5:~/Documents/gitmca$ git remote rm anajclone
+fatal: No such remote: anajclone
+student@T5:~/Documents/gitmca$ git remote rm newbr
+fatal: No such remote: newbr
+student@T5:~/Documents/gitmca$ 
+

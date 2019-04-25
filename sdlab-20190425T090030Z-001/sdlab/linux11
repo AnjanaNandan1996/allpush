@@ -1,0 +1,254 @@
+student@T5:~$ man cp
+
+[1]+  Stopped                 man cp
+student@T5:~$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T5:~$ mkdir ajce
+student@T5:~$ cd ajce
+student@T5:~/ajce$ mkdir mca
+student@T5:~/ajce$ cd mca
+student@T5:~/ajce/mca$ mkdir lmca
+student@T5:~/ajce/mca$ mkdir rmca
+student@T5:~/ajce/mca$ mkir intmca
+
+Command 'mkir' not found, did you mean:
+
+  command 'mdir' from deb mtools
+  command 'mkdir' from deb coreutils
+  command 'mkid' from deb id-utils
+
+Try: apt install <deb name>
+
+student@T5:~/ajce/mca$ mkdir intmca
+student@T5:~/ajce/mca$ cd rmca
+student@T5:~/ajce/mca/rmca$ cat > a1.txt
+hello everybody
+hi world
+^Z
+[2]+  Stopped                 cat > a1.txt
+student@T5:~/ajce/mca/rmca$ cat a1.txt
+hello everybody
+hi world
+student@T5:~/ajce/mca/rmca$ cat > a2.txt
+hello everyone,how do you do?
+^Z
+[3]+  Stopped                 cat > a2.txt
+student@T5:~/ajce/mca/rmca$ cat a2.txt
+hello everyone,how do you do?
+student@T5:~/ajce/mca/rmca$ cat a1.txt a2.txt
+hello everybody
+hi world
+hello everyone,how do you do?
+student@T5:~/ajce/mca/rmca$ cat > a3
+hi 
+iam 
+anjana           
+^Z
+[4]+  Stopped                 cat > a3
+student@T5:~/ajce/mca/rmca$ cat a3
+hi 
+iam 
+anjana
+student@T5:~/ajce/mca/rmca$ cat > a4
+can you be my friend
+^Z
+[5]+  Stopped                 cat > a4
+student@T5:~/ajce/mca/rmca$ cat a3 > a4
+student@T5:~/ajce/mca/rmca$ cat a4
+hi 
+iam 
+anjana
+student@T5:~/ajce/mca/rmca$ cat > a6
+hi all
+how are you
+^Z
+[6]+  Stopped                 cat > a6
+student@T5:~/ajce/mca/rmca$ cat a6
+hi all
+how are you
+student@T5:~/ajce/mca/rmca$ cat > a7
+i good to be your friend
+^Z
+[7]+  Stopped                 cat > a7
+student@T5:~/ajce/mca/rmca$ cat a7
+i good to be your friend
+student@T5:~/ajce/mca/rmca$ cat a6 a7 > a8
+student@T5:~/ajce/mca/rmca$ cat a8
+hi all
+how are you
+i good to be your friend
+student@T5:~/ajce/mca/rmca$ ls
+a1.txt  a2.txt  a3  a4  a6  a7  a8
+student@T5:~/ajce/mca/rmca$ cp a4 a6
+student@T5:~/ajce/mca/rmca$ cat a6
+hi 
+iam 
+anjana
+student@T5:~/ajce/mca/rmca$ cd ..
+student@T5:~/ajce/mca$ cd rmca
+student@T5:~/ajce/mca/rmca$ mv a1.txt mca
+student@T5:~/ajce/mca/rmca$ cat a1.txt
+cat: a1.txt: No such file or directory
+student@T5:~/ajce/mca/rmca$ cp a1.txt mca
+cp: cannot stat 'a1.txt': No such file or directory
+student@T5:~/ajce/mca/rmca$ cat > new
+hai
+^Z    
+[8]+  Stopped                 cat > new
+student@T5:~/ajce/mca/rmca$ ls new
+new
+student@T5:~/ajce/mca/rmca$ ls -a
+.  ..  a2.txt  a3  a4  a6  a7  a8  mca  new
+student@T5:~/ajce/mca/rmca$ cp a4 a6 new
+cp: target 'new' is not a directory
+student@T5:~/ajce/mca/rmca$ mkdir anju
+student@T5:~/ajce/mca/rmca$ cp a4 a6 anju
+student@T5:~/ajce/mca/rmca$ cat anju
+cat: anju: Is a directory
+student@T5:~/ajce/mca/rmca$ cd anju
+student@T5:~/ajce/mca/rmca/anju$ ls anju
+ls: cannot access 'anju': No such file or directory
+student@T5:~/ajce/mca/rmca/anju$ ls
+a4  a6
+student@T5:~/ajce/mca/rmca/anju$ cp -i
+cp: missing file operand
+Try 'cp --help' for more information.
+student@T5:~/ajce/mca/rmca/anju$ cp -i a3 a7
+cp: cannot stat 'a3': No such file or directory
+student@T5:~/ajce/mca/rmca/anju$  cd ..
+student@T5:~/ajce/mca/rmca$ cp -i a3 a7
+cp: overwrite 'a7'? n
+student@T5:~/ajce/mca/rmca$ cp -n a3 a7
+student@T5:~/ajce/mca/rmca$ cd anju
+student@T5:~/ajce/mca/rmca/anju$ cp -n a3 a7
+cp: cannot stat 'a3': No such file or directory
+student@T5:~/ajce/mca/rmca/anju$ cp -n a4 a6
+student@T5:~/ajce/mca/rmca/anju$ cd ..
+student@T5:~/ajce/mca/rmca$ cat > f1
+hi deepu
+hi malu
+^Z
+[9]+  Stopped                 cat > f1
+student@T5:~/ajce/mca/rmca$ cat > f2
+hi shwetha
+^Z
+[10]+  Stopped                 cat > f2
+student@T5:~/ajce/mca/rmca$ cp -b f1 f2
+student@T5:~/ajce/mca/rmca$ ls f2 f2~
+f2  f2~
+student@T5:~/ajce/mca/rmca$ cat f2~
+hi shwetha
+student@T5:~/ajce/mca/rmca$ ls -a
+.  ..  a2.txt  a3  a4  a6  a7  a8  anju  f1  f2  f2~  mca  new
+student@T5:~/ajce/mca/rmca$ f2~
+
+Command 'f2~' not found, did you mean:
+
+  command 'f2c' from deb f2c
+
+Try: apt install <deb name>
+
+student@T5:~/ajce/mca/rmca$ cat f2~
+hi shwetha
+student@T5:~/ajce/mca/rmca$ cp -a
+cp: missing file operand
+Try 'cp --help' for more information.
+student@T5:~/ajce/mca/rmca$ cp *. txt mca
+cp: target 'mca' is not a directory
+student@T5:~/ajce/mca/rmca$ mv *. txt mca
+mv: target 'mca' is not a directory
+student@T5:~/ajce/mca/rmca$ cd~
+
+Command 'cd~' not found, did you mean:
+
+  command 'cde' from deb cde
+  command 'cdw' from deb cdw
+  command 'cdb' from deb tinycdb
+  command 'cdi' from deb cdo
+  command 'cdo' from deb cdo
+  command 'cdv' from deb codeville
+  command 'cd5' from deb cd5
+  command 'cdp' from deb irpas
+
+Try: apt install <deb name>
+
+student@T5:~/ajce/mca/rmca$ cd ~
+student@T5:~$ cd ajce
+student@T5:~/ajce$ cp *.txt mca
+cp: cannot stat '*.txt': No such file or directory
+student@T5:~/ajce$ mv *.txt mca
+mv: cannot stat '*.txt': No such file or directory
+student@T5:~/ajce$ cd mca
+student@T5:~/ajce/mca$ cat aa
+cat: aa: No such file or directory
+student@T5:~/ajce/mca$ cat > aa
+hjhgvj
+hjvgjh
+zzz   
+^Z
+[11]+  Stopped                 cat > aa
+student@T5:~/ajce/mca$ cat > bb
+afsxf
+fsgwfgb
+^Z
+[12]+  Stopped                 cat > bb
+student@T5:~/ajce/mca$  cp *.txt bb
+cp: cannot stat '*.txt': No such file or directory
+student@T5:~/ajce/mca$ cat > cc.txt
+yugdf
+fygahd
+cp *.txt cc
+^Z
+[13]+  Stopped                 cat > cc.txt
+student@T5:~/ajce/mca$ cp *.txt cc
+student@T5:~/ajce/mca$ cd rr
+bash: cd: rr: No such file or directory
+student@T5:~/ajce/mca$ cd cc
+bash: cd: cc: Not a directory
+student@T5:~/ajce/mca$ ls
+aa  bb  cc  cc.txt  intmca  lmca  rmca
+student@T5:~/ajce/mca$ cd rmca
+student@T5:~/ajce/mca/rmca$ cp a2.txt anju
+student@T5:~/ajce/mca/rmca$ ls
+a2.txt  a3  a4  a6  a7  a8  anju  f1  f2  f2~  mca  new
+student@T5:~/ajce/mca/rmca$ cd anju
+student@T5:~/ajce/mca/rmca/anju$ ls
+a2.txt  a4  a6
+student@T5:~/ajce/mca/rmca/anju$ cd ..
+student@T5:~/ajce/mca/rmca$ cat > hello.txt
+hgf
+fhg
+^Z
+[14]+  Stopped                 cat > hello.txt
+student@T5:~/ajce/mca/rmca$ cat > hai.txt
+fhf
+jhf
+^Z
+[15]+  Stopped                 cat > hai.txt
+student@T5:~/ajce/mca/rmca$ cp *.txt anju
+student@T5:~/ajce/mca/rmca$ cd anju
+student@T5:~/ajce/mca/rmca/anju$ ls
+a2.txt  a4  a6  hai.txt  hello.txt
+student@T5:~/ajce/mca/rmca/anju$ cd ..
+student@T5:~/ajce/mca/rmca$ mkdir anjana
+student@T5:~/ajce/mca/rmca$ cp -R anju anjana
+student@T5:~/ajce/mca/rmca$ cd anjana
+student@T5:~/ajce/mca/rmca/anjana$ ls
+anju
+student@T5:~/ajce/mca/rmca/anjana$ cd ..
+student@T5:~/ajce/mca/rmca$ mkdir alex
+student@T5:~/ajce/mca/rmca$ mkdir nandu
+student@T5:~/ajce/mca/rmca$ cp -r alex nandu anjana
+student@T5:~/ajce/mca/rmca$ cd anjana
+student@T5:~/ajce/mca/rmca/anjana$ ls
+alex  anju  nandu
+student@T5:~/ajce/mca/rmca/anjana$ cd ..
+student@T5:~/ajce/mca/rmca$ cp -b f1 f2
+student@T5:~/ajce/mca/rmca$ ls f2 f2~
+f2  f2~
+student@T5:~/ajce/mca/rmca$ cat f2~
+hi deepu
+hi malu
+student@T5:~/ajce/mca/rmca$ cp -i f2 f1
+cp: overwrite 'f1'? n
+

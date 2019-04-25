@@ -1,0 +1,49 @@
+1)
+
+
+echo "enter the number"
+read n
+if (( $n % 2 == 0 ))
+then
+echo "the number is even"
+else 
+echo "the number is odd"
+fi
+
+2)
+
+echo -e "enter the number"
+read a
+read b
+if [ $a -eq $b ]
+then
+echo "$a and $b are equal"
+elif [ $a -lt $b ]
+then
+echo "$b is greater"
+else 
+echo "$a is greater"
+fi 
+
+
+3)
+
+echo -e "enter the number"
+read year
+if (( year % 4 == 0 ))
+then
+echo "it is leapyear"
+else 
+echo "not a leapyear"
+fi
+
+
+
+
+
+4)echo " enter a value"
+read n
+for (( i=1; i<=10; i++ ))
+do
+echo "$n * $i = $(( n * i ))"
+done

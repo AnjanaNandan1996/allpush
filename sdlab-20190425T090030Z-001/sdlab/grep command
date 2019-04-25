@@ -1,0 +1,92 @@
+student@T5:~$ cd ajce
+student@T5:~/ajce$ cd mca
+student@T5:~/ajce/mca$ cd lmca
+student@T5:~/ajce/mca/lmca$ cat > ac.text
+hi everybody
+i think ..i am very happy to se you
+i have been looking for long
+^Z
+[1]+  Stopped                 cat > ac.text
+student@T5:~/ajce/mca/lmca$ grep looking ac.text
+i have been looking for long
+student@T5:~/ajce/mca/lmca$ cat > ga.txt
+hai...it is rain
+i have no umberla
+can i come with you
+do you have umberla^Z
+[2]+  Stopped                 cat > ga.txt
+student@T5:~/ajce/mca/lmca$ grep you ga.txt
+can i come with you
+student@T5:~/ajce/mca/lmca$ grep you ga.txt ac.txt
+ga.txt:can i come with you
+grep: ac.txt: No such file or directory
+student@T5:~/ajce/mca/lmca$ grep "you" ga.txt ac.txt
+ga.txt:can i come with you
+grep: ac.txt: No such file or directory
+student@T5:~/ajce/mca/lmca$ grep "you" ac.txt ga.txt 
+grep: ac.txt: No such file or directory
+ga.txt:can i come with you
+student@T5:~/ajce/mca/lmca$ grep "you" ac.text ga.txt 
+ac.text:i think ..i am very happy to se you
+ga.txt:can i come with you
+student@T5:~/ajce/mca/lmca$ cat > ll.txt 
+HELLO LACHU
+hello lachu
+Hello Lachu^Z
+[3]+  Stopped                 cat > ll.txt
+student@T5:~/ajce/mca/lmca$ grep -i "Hello" ll.txt
+HELLO LACHU
+hello lachu
+student@T5:~/ajce/mca/lmca$ cat > lla.txt 
+HELLO ANJANA
+hello anjana
+Hello nandu^Z
+[4]+  Stopped                 cat > lla.txt
+student@T5:~/ajce/mca/lmca$ grep -i "Hello" lla.txt
+HELLO ANJANA
+hello anjana
+student@T5:~/ajce/mca/lmca$ grep "how" lla.txt
+hai how 
+student@T5:~/ajce/mca/lmca$ grep -i  "ANJana" lla.txt
+HELLO ANJANA
+hello anjana
+student@T5:~/ajce/mca/lmca$ grep -i  "ANJANA" lla.txt
+HELLO ANJANA
+hello anjana
+student@T5:~/ajce/mca/lmca$ grep -w looking|you ac.text ga.txt
+you: command not found
+^Z              
+[5]+  Stopped                 grep --color=auto -w looking | you ac.text ga.txt
+student@T5:~/ajce/mca/lmca$ grep -w 'looking|you' ac.text ga.txt
+student@T5:~/ajce/mca/lmca$ egrep -w 'looking|you' ac.text ga.txt
+ac.text:i think ..i am very happy to se you
+ac.text:i have been looking for long
+ga.txt:can i come with you
+student@T5:~/ajce/mca/lmca$ egrep 'looking|you' ac.text ga.txt
+ac.text:i think ..i am very happy to se you
+ac.text:i have been looking for long
+ga.txt:can i come with you
+student@T5:~/ajce/mca/lmca$ grep -B2 "am" ac.text 
+hi everybody
+i think ..i am very happy to se you
+student@T5:~/ajce/mca/lmca$ grep -A2 "am" ac.text 
+i think ..i am very happy to se you
+i have been looking for long
+student@T5:~/ajce/mca/lmca$ grep -A2 "am" ga.text 
+grep: ga.text: No such file or directory
+student@T5:~/ajce/mca/lmca$ grep -A2 "am" ga.txt 
+student@T5:~/ajce/mca/lmca$ 
+student@T5:~/ajce/mca/lmca$ grep -A2 "no" ga.txt 
+i have no umberla
+can i come with you
+student@T5:~/ajce/mca/lmca$ grep -v "have" ga.txt 
+hai...it is rain
+can i come with you
+student@T5:~/ajce/mca/lmca$ grep -n "have" ga.txt 
+2:i have no umberla
+student@T5:~/ajce/mca/lmca$ grep -n "with" ga.txt 
+3:can i come with you
+student@T5:~/ajce/mca/lmca$ grep "^hai" ga.txt 
+hai...it is rain
+student@T5:~/ajce/mca/lmca$ 
+

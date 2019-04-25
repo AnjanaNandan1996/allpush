@@ -1,0 +1,75 @@
+student@T7:~$ echo anju
+anju
+student@T7:~$ read a
+5
+student@T7:~$ echo $a
+5
+student@T7:~$ man if
+No manual entry for if
+student@T7:~$ man ls
+student@T7:~$ man echo
+student@T7:~$ echo -e haii anju
+haii anju
+student@T7:~$ echo -e haii \anju
+haii anju
+student@T7:~$ man echo
+student@T7:~$ echo -e haii \banju
+haii banju
+student@T7:~$ echo -e "haii \banju"
+haiianju
+student@T7:~$ echo -e "haii \nanju"
+haii 
+anju
+student@T7:~$ man echo
+student@T7:~$ echo -n "haii anju"
+haii anjustudeman echo
+student@T7:~$ man read
+student@T7:~$ read -p "enter the name"
+enter the name anju
+student@T7:~$ echo my name is &reply
+[1] 3230
+my name is
+
+Command 'reply' not found, but can be installed with:
+
+apt install libreply-perl
+Please ask your administrator.
+
+[1]+  Done                    echo my name is
+student@T7:~$ echo "my name is &REPLY"
+my name is &REPLY
+student@T7:~$ echo "my name is $REPLY"
+my name is  anju
+student@T7:~$ read -s -p "enter password :" pwd
+enter password :student@T7:~$ echo $pwd
+anju
+student@T7:~$ read "enter "
+bash: read: `enter ': not a valid identifier
+student@T7:~$ read -p "enter name " name
+enter name anju
+student@T7:~$ echo name
+name
+student@T7:~$ echo $name
+anju
+student@T7:~$ read -p "enter name " 
+enter name jerin
+student@T7:~$ echo $REPLY
+jerin
+student@T7:~$ read a,b
+bash: read: `a,b': not a valid identifier
+student@T7:~$ read a b
+5
+student@T7:~$ read a b
+5 4
+student@T7:~$ echo $a
+5
+student@T7:~$ echo $b
+4
+student@T7:~$ echo $b $a
+4 5
+student@T7:~$ 
+
+
+
+
+

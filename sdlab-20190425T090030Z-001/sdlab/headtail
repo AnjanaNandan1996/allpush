@@ -1,0 +1,240 @@
+student@T5:~$ cd ajce
+student@T5:~/ajce$ cd mca
+student@T5:~/ajce/mca$ cd lmca
+student@T5:~/ajce/mca/lmca$ cat > name.txt
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+^Z
+[1]+  Stopped                 cat > name.txt
+student@T5:~/ajce/mca/lmca$ head name.txt
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+student@T5:~/ajce/mca/lmca$ head -n name.txt
+head: invalid number of lines: ‘name.txt’
+student@T5:~/ajce/mca/lmca$ head -n 3 name.txt
+anu
+anna
+teena
+student@T5:~/ajce/mca/lmca$ head -n 5 name.txt
+anu
+anna
+teena
+meenu
+anju
+student@T5:~/ajce/mca/lmca$ head -c 5 name.txt
+anu
+astudent@T5:~/ajce/mca/lmca$ cat > place.txt
+hyderabad
+itanagar
+dispur
+patna
+panjali
+gandhinagar
+chandigharh
+shimla
+srinagar
+^Z
+[2]+  Stopped                 cat > place.txt
+student@T5:~/ajce/mca/lmca$ head -q name.txt
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+student@T5:~/ajce/mca/lmca$ head -q name.txt place.txt
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+hyderabad
+itanagar
+dispur
+patna
+panjali
+gandhinagar
+chandigharh
+shimla
+srinagar
+student@T5:~/ajce/mca/lmca$ head  name.txt place.txt
+==> name.txt <==
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+
+==> place.txt <==
+hyderabad
+itanagar
+dispur
+patna
+panjali
+gandhinagar
+chandigharh
+shimla
+srinagar
+student@T5:~/ajce/mca/lmca$ head -v place.txt
+==> place.txt <==
+hyderabad
+itanagar
+dispur
+patna
+panjali
+gandhinagar
+chandigharh
+shimla
+srinagar
+student@T5:~/ajce/mca/lmca$ head -c 3 place.txt
+hydstudent@T5:~/ajce/mca/lmca$ head -c 3 name.txt
+student@T5:~/ajce/mca/lmca$ tail name.txt
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+student@T5:~/ajce/mca/lmca$ tail name.txt place.txt
+==> name.txt <==
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+
+==> place.txt <==
+hyderabad
+itanagar
+dispur
+patna
+panjali
+gandhinagar
+chandigharh
+shimla
+srinagar
+student@T5:~/ajce/mca/lmca$ tail -3 place.txt
+chandigharh
+shimla
+srinagar
+student@T5:~/ajce/mca/lmca$ tail -n 3 place.txt
+chandigharh
+shimla
+srinagar
+student@T5:~/ajce/mca/lmca$ tail -c -3 place.txt
+ar
+student@T5:~/ajce/mca/lmca$ tail -c 3 place.txt
+ar
+student@T5:~/ajce/mca/lmca$ tail -q place.txt name.txt
+hyderabad
+itanagar
+dispur
+patna
+panjali
+gandhinagar
+chandigharh
+shimla
+srinagar
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+student@T5:~/ajce/mca/lmca$ tail  place.txt name.txt
+==> place.txt <==
+hyderabad
+itanagar
+dispur
+patna
+panjali
+gandhinagar
+chandigharh
+shimla
+srinagar
+
+==> name.txt <==
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+student@T5:~/ajce/mca/lmca$ tail -v name.txt
+==> name.txt <==
+anu
+anna
+teena
+meenu
+anju
+mariya
+let us consider two files havind sate and capyial
+indian states and capitals respectively
+student@T5:~/ajce/mca/lmca$ tail --version
+tail (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Paul Rubin, David MacKenzie, Ian Lance Taylor,
+and Jim Meyering.
+student@T5:~/ajce/mca/lmca$ 
+student@T5:~/ajce/mca/lmca$ head -n 20 place.txt | tail -5
+panjali
+gandhinagar
+chandigharh
+shimla
+srinagar
+student@T5:~/ajce/mca/lmca$ tail -N 7 place.txt|sort -r
+tail: invalid option -- 'N'
+Try 'tail --help' for more information.
+student@T5:~/ajce/mca/lmca$ tail -n 7 place.txt|sort -r
+srinagar
+shimla
+patna
+panjali
+gandhinagar
+dispur
+chandigharh
+student@T5:~/ajce/mca/lmca$ cat place.txt
+hyderabad
+itanagar
+dispur
+patna
+panjali
+gandhinagar
+chandigharh
+shimla
+srinagar
+student@T5:~/ajce/mca/lmca$ 
+

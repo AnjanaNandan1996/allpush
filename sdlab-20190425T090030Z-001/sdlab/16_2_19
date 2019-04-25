@@ -1,0 +1,248 @@
+student@T5:~$ cd ajce
+student@T5:~/ajce$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T5:~/ajce$ cd mca
+student@T5:~/ajce/mca$ cd rmca
+student@T5:~/ajce/mca/rmca$ cat >r.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+^Z
+[1]+  Stopped                 cat > r.txt
+student@T5:~/ajce/mca/rmca$ cat r.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+student@T5:~/ajce/mca/rmca$ wc r.txt
+10 10 21 r.txt
+student@T5:~/ajce/mca/rmca$ wc -l r.txt
+10 r.txt
+student@T5:~/ajce/mca/rmca$ wc -c
+^[[^C
+student@T5:~/ajce/mca/rmca$ wc -c r.txt
+21 r.txt
+student@T5:~/ajce/mca/rmca$ wc -m r.txt
+21 r.txt
+student@T5:~/ajce/mca/rmca$ wc -L r.txt
+2 r.txt
+student@T5:~/ajce/mca/rmca$ wc -w r.txt
+10 r.txt
+student@T5:~/ajce/mca/rmca$ cat >d.txt
+1
+453
+hai all
+how are you
+g
+lk
+3455
+^Z
+[2]+  Stopped                 cat > d.txt
+student@T5:~/ajce/mca/rmca$ wc d.txt
+ 7 10 36 d.txt
+student@T5:~/ajce/mca/rmca$ wc -l d.txt
+7 d.txt
+student@T5:~/ajce/mca/rmca$ wc -c d.txt
+36 d.txt
+student@T5:~/ajce/mca/rmca$ wc -L d.txt
+11 d.txt
+student@T5:~/ajce/mca/rmca$ wc -w d.txt
+10 d.txt
+student@T5:~/ajce/mca/rmca$ cat > lachu.txt
+hello    hai    all
+798  
+jhgjh
+c   ghjfh   jkh  kjh
+^Z
+[3]+  Stopped                 cat > lachu.txt
+student@T5:~/ajce/mca/rmca$ cat lachu.txt
+hello    hai    all
+798
+jhgjh
+c   ghjfh   jkh  kjh
+student@T5:~/ajce/mca/rmca$ wc lachu.txt
+ 4  9 51 lachu.txt
+student@T5:~/ajce/mca/rmca$ wc -l lachu.txt
+4 lachu.txt
+student@T5:~/ajce/mca/rmca$ wc -c lachu.txt
+51 lachu.txt
+student@T5:~/ajce/mca/rmca$ wc -m lachu.txt
+51 lachu.txt
+student@T5:~/ajce/mca/rmca$ wc -L lachu.txt
+20 lachu.txt
+student@T5:~/ajce/mca/rmca$ wc -w lachu.txt
+9 lachu.txt
+student@T5:~/ajce/mca/rmca$ cat h.txt
+cat: h.txt: No such file or directory
+student@T5:~/ajce/mca/rmca$ cat > h.txt
+hai                                                  
+i am anjana
+nice to see you
+where are from
+432
+rs
+687
+tgh
+^Z
+[4]+  Stopped                 cat > h.txt
+student@T5:~/ajce/mca/rmca$ cut -c4 h.txt
+
+m
+e
+r
+
+
+
+
+student@T5:~/ajce/mca/rmca$ cut -c2 h.txt
+a
+ 
+i
+h
+3
+s
+8
+g
+student@T5:~/ajce/mca/rmca$ cut c3,6,7,8
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T5:~/ajce/mca/rmca$ cut c3,6,7,8 h.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T5:~/ajce/mca/rmca$ cut -c3,6,7,8 h.txt
+i
+aanj
+cto 
+e ar
+2
+
+7
+h
+student@T5:~/ajce/mca/rmca$ cut -b 1,2 h.txt
+ha
+i 
+ni
+wh
+43
+rs
+68
+tg
+student@T5:~/ajce/mca/rmca$ cat > k.txt
+kerala
+tamilnadu
+andhra
+mumbai
+rajasthan
+delhi
+bengal
+^Z
+[5]+  Stopped                 cat > k.txt
+student@T5:~/ajce/mca/rmca$ cut -c4 k.txt
+a
+i
+h
+b
+a
+h
+g
+student@T5:~/ajce/mca/rmca$ cat k.txt
+kerala
+tamilnadu
+andhra
+mumbai
+rajasthan
+delhi
+bengal
+student@T5:~/ajce/mca/rmca$ cut -c1 k.txt
+k
+t
+a
+m
+r
+d
+b
+student@T5:~/ajce/mca/rmca$ cut -b 1,2,3 k.txt
+ker
+tam
+and
+mum
+raj
+del
+ben
+student@T5:~/ajce/mca/rmca$ cat > f101.txt
+anju    alex    anjana
+meenu	arya    fergy
+arjun	siju	mariya
+^Z
+[6]+  Stopped                 cat > f101.txt
+student@T5:~/ajce/mca/rmca$ cat -f3 f101.txt
+cat: invalid option -- 'f'
+Try 'cat --help' for more information.
+student@T5:~/ajce/mca/rmca$ cut -f3 f101.txt
+anjana
+fergy
+mariya
+student@T5:~/ajce/mca/rmca$ cat > f103.txt
+anju,meenu,mariya
+athira,reeja,niya
+aparana,vidhya,anita
+^Z
+[7]+  Stopped                 cat > f103.txt
+student@T5:~/ajce/mca/rmca$ cut -f2 f103.txt
+anju,meenu,mariya
+athira,reeja,niya
+aparana,vidhya,anita
+student@T5:~/ajce/mca/rmca$ man cut
+
+[8]+  Stopped                 man cut
+student@T5:~/ajce/mca/rmca$ cut -d f103.txt
+cut: the delimiter must be a single character
+Try 'cut --help' for more information.
+student@T5:~/ajce/mca/rmca$ cut -d2 f103.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T5:~/ajce/mca/rmca$ cut -d 1 f103.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T5:~/ajce/mca/rmca$ cut -d ' '-f 1 f103.txt
+cut: the delimiter must be a single character
+Try 'cut --help' for more information.
+student@T5:~/ajce/mca/rmca$ cut -d ' ' -f f101.txt
+cut: invalid field value ‘f101.txt’
+Try 'cut --help' for more information.
+student@T5:~/ajce/mca/rmca$ cut -d ' ' -f 1  f101.txt
+anju	alex	anjana
+meenu	arya	fergy
+arjun	siju	mariya
+student@T5:~/ajce/mca/rmca$ cut -d, -f 1  f101.txt
+anju	alex	anjana
+meenu	arya	fergy
+arjun	siju	mariya
+student@T5:~/ajce/mca/rmca$ touch f33.txt
+student@T5:~/ajce/mca/rmca$ cut -d " " -f 3  f101.txt
+anju	alex	anjana
+meenu	arya	fergy
+arjun	siju	mariya
+student@T5:~/ajce/mca/rmca$ cut -d " " -f 3  f33.txt
+hjooio
+,bhjgj
+hhhhhdd
+student@T5:~/ajce/mca/rmca$ cut -d, -f 1  f33.txt
+hai  hjooio jkhj
+gfch  
+hh bghddddd hhhhhdd  reejan  fgdfg
+student@T5:~/ajce/mca/rmca$ 
+

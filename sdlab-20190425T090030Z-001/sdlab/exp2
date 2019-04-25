@@ -1,0 +1,91 @@
+student@T7:~$ echo anju
+anju
+student@T7:~$ mkdir ajce
+student@T7:~$ cd ajce
+student@T7:~/ajce$ mkdir mca
+student@T7:~/ajce$ cd mca
+student@T7:~/ajce/mca$ mkdir Rmca
+student@T7:~/ajce/mca$ mkdir Lmca
+student@T7:~/ajce/mca$ mkdir DDmca
+student@T7:~/ajce/mca$ cd Rmca
+student@T7:~/ajce/mca/Rmca$ cd..
+cd..: command not found
+student@T7:~/ajce/mca/Rmca$ cd ..
+student@T7:~/ajce/mca$ pwd
+/home/student/ajce/mca
+student@T7:~/ajce/mca$ cd ~
+student@T7:~$ cd \
+> cd /
+bash: cd: too many arguments
+student@T7:~$ cd /
+student@T7:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T7:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T7:/$ cd ~
+student@T7:~$ cd ajce
+student@T7:~/ajce$ cd mca
+student@T7:~/ajce/mca$ cd Lmca
+student@T7:~/ajce/mca/Lmca$ cd /
+student@T7:/$ pwd
+/
+student@T7:/$ cd ~
+student@T7:~$ cd ajce
+student@T7:~/ajce$ pwd
+/home/student/ajce
+student@T7:~/ajce$ cd ..
+student@T7:~$ pwd
+/home/student
+student@T7:~$ cd ajce
+student@T7:~/ajce$ cd mca
+student@T7:~/ajce/mca$ ls
+DDmca  Lmca  Rmca
+student@T7:~/ajce/mca$ ls -l
+total 12
+drwxr-xr-x 2 student student 4096 Jan 31 14:27 DDmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:27 Lmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:27 Rmca
+student@T7:~/ajce/mca$ ls >out.txt
+student@T7:~/ajce/mca$ ls -d * /
+/  DDmca  Lmca  out.txt  Rmca
+student@T7:~/ajce/mca$ ls ~
+ajce     Documents         Music     PycharmProjects  Videos
+angelm   Downloads         Pictures  snap             wt
+Desktop  examples.desktop  Public    Templates
+student@T7:~/ajce/mca$ ls /
+bin    dev   initrd.img      lib64       mnt   root  snap  tmp  vmlinuz
+boot   etc   initrd.img.old  lost+found  opt   run   srv   usr  vmlinuz.old
+cdrom  home  lib             media       proc  sbin  sys   var
+student@T7:~/ajce/mca$ ls ..
+mca
+student@T7:~/ajce/mca$ ls -t
+out.txt  DDmca  Lmca  Rmca
+student@T7:~/ajce/mca$ ls *
+out.txt
+
+DDmca:
+
+Lmca:
+
+Rmca:
+student@T7:~/ajce/mca$ cd ~
+student@T7:~$ ls ajce/mca
+DDmca  Lmca  out.txt  Rmca
+student@T7:~$ cd ajce
+student@T7:~/ajce$ ls mca/out.txt
+mca/out.txt
+student@T7:~/ajce$ cd mca
+student@T7:~/ajce/mca$ ls -s
+total 16
+4 DDmca  4 Lmca  4 out.txt  4 Rmca
+student@T7:~/ajce/mca$ cd ..
+student@T7:~/ajce$ cd ..
+student@T7:~$ cd ..
+student@T7:/home$ cd /
+student@T7:/$ home/student/ajce/mca
+bash: home/student/ajce/mca: Is a directory
+student@T7:/$ cd ~
+student@T7:~$ man ls
+student@T7:~$ ^C
+student@T7:~$ 
+
